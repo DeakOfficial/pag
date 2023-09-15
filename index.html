@@ -1,328 +1,569 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery Mobile: Theme Download</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+        }
 
-	
-	
-	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-	
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	
-	<link rel="stylesheet" href="./themes/negro.min.css" />
-	<link rel="stylesheet" href="./themes/jquery.mobile.icons.min.css" />
+        h2 {
+            /*Letra de titulo*/
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
 
-	<style>
-		.fondo {
-               background-image: url("./imge/mode1.jpg");
-               background-position: center;
-               background-size: 60%;
-          }
-		  .marco {
-               color:rgb(255, 255, 255);
-			   
-          }
-		  
-		  
-	</style>
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .container-fluid {/*que tan despegado quieres que este la pagina*/
+            padding: 250px 50px;
+            background-color: #ffffff
+        }
+
+        .bg-grey {/*Color secundario*/
+            background-color: #000000;
+        }
+
+        .logo-small {
+            color: #ddc6bf;
+            font-size: 50px;
+        }
+
+        .logo {
+            color: #2D8AAD;
+            font-size: 200px;
+        }
+
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .carousel-control.right,
+        .carousel-control.left {
+            background-image: none;
+            color: #727272;
+        }
+
+        .carousel-indicators li {
+            border-color: #727272;
+        }
+
+        .carousel-indicators li.active {
+            background-color: #3cc4f1;
+        }
+
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+
+        .item span {
+            font-style: normal;
+        }
+
+        .panel {
+            /*es el bordo del panel de productos*/
+            border: 1px solid #ffffff;
+            border-radius: 0 !important;
+            transition: box-shadow 0.5s;
+        }
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .panel-footer .btn:hover {
+            /* controno del boton cuando pass el cursor arriba*/
+            border: 1px solid #f7f7f7;
+            background-color: #2D8AAD !important;
+            color: #fdfdfd;
+        }
+
+        .panel-heading {
+            /*es el apartado de arriba de los productos*/
+            color: #2D8AAD !important;
+            background-color: #ffffff !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .panel-footer {
+            /*color de debajo de los articulos donde esta ubicado el boton de mas informacion*/
+            background-color: rgb(255, 255, 255) !important;
+        }
+
+        .panel-footer h3 {
+            /*palabras escritas en el footer*/
+            color: #16e063;
+            font-size: 32px;
+        }
+
+        .panel-footer h4 {
+            /*palabras escritas en el footer*/
+            color: #e7dbdb;
+            font-size: 14px;
+        }
+
+        .panel-footer .btn {
+            /*palabras escritas en el footer*/
+            margin: 15px 0;
+            background-color: #ffffff;
+            color: #2D8AAD;
+        }
+        
+
+        .navbar {
+            /*las letras del menu de navegacion*/
+            margin-bottom: 0;
+            background-color: #000000;
+            z-index: 9999;
+            border: 0;
+            font-size: 13px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar li a,
+        .navbar .navbar-brand {
+            /*Color de la lera de la barra de navegacion*/
+            color: #2D8AAD !important;
+        }
+
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            /*Color al seleccionar la barra de navegacion*/
+            color: #ffffff !important;
+            background-color: #2D8AAD !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+        .gif {
+            background-image: url(vid/gif.gif);
+            background-position: center;
+            background-size: 1500px;
+            height: 250px;
+        }
+
+        footer .glyphicon {
+            /*Fleca del boton para regrear arriba*/
+            font-size: 50px;
+            margin-bottom: 50px;
+            color: #3cc4f1;
+        }
+
+        .slideanim {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+        }
+    </style>
 </head>
-<body>
-	
-	<div data-role="page">
-		<div data-role="header">
-			<div class="data-theme ui-body-a">
-			<div data-role="navbar" data-iconpos="bottom">
-				<ul>
-					<li><a href="index.html" data-icon="home">Inicio</a></li>
-					<li><a href="#mode" data-icon="tag">Modelos</a></li>
-					<li><a href="#histo" data-icon="info">Museo</a></li>
-					<li><a href="#noti" data-icon="star">Noticias</a></li>
-					</ul>
-				</div><!-- /navbar -->
-			</div>
-		</div>
-		<div data-role="content" class="ui-content">
-			<div id="demo" class="carousel slide" data-bs-ride="carousel">
+<!-- barra de navegacion -->
 
-				<!-- Indicators/dots -->
-				<div class="carousel-indicators">
-				  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-				  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-				  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-				</div>
-				
-				<!-- The slideshow/carousel -->
-				<div class="carousel-inner">
-				  <div class="carousel-item active">
-					<img class="img-fluid" src="imge/1.jpg"  style="width:100%">
-					<div class="carousel-caption">
-					  <h3>COUNTACH LPI 800-4</h3>
-					  <p>EL FUTURO ES NUESTRO LEGADO</p>
-					</div>
-				  </div>
-				  <div class="carousel-item">
-					<img class="img-fluid" src="imge/2.jpg"  style="width:100%">
-					<div class="carousel-caption">
-					  <h3>HURACAN STO</h3>
-					  <p>BASADA EN UNA HISTORIA REAL</p>
-					</div> 
-				  </div>
-				  <div class="carousel-item">
-					<img class="img-fluid" src="imge/4.jpg" alt="New York" class="d-block" style="width:100%">
-					<div class="carousel-caption">
-					  <h3>AVENTADOR SVJ</h3>
-					  <p>lAS EMOCIONES REALES DAN FORMA AL FUTURO</p>
-					</div>  
-				  </div>
-				</div>
-				
-				
-			  </div>
-			  
-			  
-
-
-		</div>
-
-		<div data-role="footer"data-position="fixed">
-			Valores de consumo de combustible y emisiones de todos los coches presentes en esta página*; 
-			Consumo de combustible en ciclo combinado: 19,5-12,7 l/100km (WLTP); Emisiones de CO₂ en ciclo combinado: 448-325 g/km (WLTP)
-
-		</div>
-	</div><!--Final-->
-
-	<!--Inicio-->
-	<div data-role="page" id="mode">
-		<div data-role="header">
-			<div class="data-theme ui-body-a">
-			<div data-role="navbar" data-iconpos="bottom">
-				<ul>
-					<li><a href="index.html" data-icon="home">Inicio</a></li>
-					<li><a href="#mode" data-icon="tag">Modelos</a></li>
-					<li><a href="#histo" data-icon="info">Museo</a></li>
-					<li><a href="#noti" data-icon="star">Noticias</a></li>
-					</ul>
-				</div><!-- /navbar -->
-			</div>
-		</div><!--Final de header-->
-		<div data-role="content" class="ui-content"><!--inicio del content-->
-			<div class="p-5 rounded fondo">
-				<div class="marco">
-					<h3 class="display-1 ">Modelos</h3>
-					<p class="display-4 ">LAMBORGHINI</p>
-				</div>
-			</div>
-			<br>
-
-
-			
-
-			  <div class="row">
-				<article class="col">
-					 <div class="card">
-						  <img src="imge/AVENTA.jpg" class="card-img-top img-thumbnail">
-						  <div class="card-body">
-							<h5 class="card-title">AVENTADOR</h5>
-							<p class="card-text">El Aventador fue creado con el objetivo de adelantarse al futuro, como se refleja en el uso de tecnologías innovadoras, tales como el motor V12, y en el uso de la fibra de carbono.
-								Verdaderas obras maestras de diseño que expresan dinamismo y agresividad y que han hecho del monocasco de carbono su punta de lanza. El interior del Aventador combina tecnologías de altísimo nivel y equipamientos de lujo con materiales de altísima calidad magistralmente elaborados, como exige la mejor tradición italiana. Una familia de superdeportivos que ya es leyenda. Descubra las fichas técnicas, las dimensiones, las prestaciones y las características detalladas de los nuevos modelos Lamborghini Aventador.</p>
-							<a href="#" class="btn btn-color">Ver más...</a>
-						  </div>
-						</div>
-				</article>
-				<article class="col">
-					 <div class="card">
-						  <img src="imge/HURA.jpg" class="card-img-top img-thumbnail" >
-						  <div class="card-body">
-							<h5 class="card-title">HURACAN</h5>
-							<p class="card-text">De nuestro pasado hemos aprendido a la perfección. Así nació el primer modelo de Lamborghini Huracán.
-								Aún más prestaciones, aún más control, aún más innovación.
-								El Huracán, con su motor V10 y la tecnología más avanzada, es capaz de ofrecer una experiencia de conducción extraordinaria.
-								Diseñado para garantizar las mejores prestaciones y ser controlable en cualquier situación de conducción, es fácil de llevar al límite y extremadamente emocionante, gracias a tecnologías como el cambio Lamborghini Doppia Frizione (LDF) y el sistema de tracción total con control electrónico.
-								
-								Así nace la mejor experiencia de conducción de todos los tiempos. Descubra todos los modelos de Lamborghini Huracán actualmente en venta.</p>
-							<a href="#" class="btn btn-color">Ver más...</a>
-						  </div>
-						</div>
-				</article>
-				<article class="col">
-					 <div class="card">
-						  <img src="./imge/URUS.jpg" class="card-img-top img-thumbnail">
-						  <div class="card-body">
-							   <h5 class="card-title">URUS</h5>
-							   <p class="card-text">El Lamborghini Urus es el primer vehículo utilitario superdeportivo del mundo en el que el lujo, el carácter deportivo y las prestaciones van de la mano del confort y la versatilidad, garantizando la mejor dinámica de conducción de su categoría y un diseño con una elegancia inconfundible. El Urus aúna las características de múltiples espíritus: deportivo, elegante y off-road. Perfecto para la conducción de todos los días en cualquier ámbito. El raspante rugido del motor y las elevadas prestaciones convierten al Lamborghini Urus en un coche sorprendente.</p>
-							   <a href="#" class="btn btn-color">Ver más...</a>
-						  </div>
-					 </div>
-				</article>
-			   <article class="col">
-					 <div class="card">
-						  <img src="./imge/LI1.jpg" class="card-img-top img-thumbnail">
-						  <img src="./imge/LI2.jpg" class="card-img-top img-thumbnail">
-						  <img src="./imge/LI3.jpg" class="card-img-top img-thumbnail">
-						  <div class="card-body">
-							   <h5 class="card-title">SERIES LIMITADAS</h5>
-							   <p class="card-text">Los Limited Series son Lamborghini más exclusivos, fabricados en edición limitada para un reducido y selectísimo número de clientes. Los Limited Series, auténtica tecnología punta en el ámbito de los superdeportivos, representan el espíritu Lamborghini más puro en todos los aspectos y cuentan con las características más avanzadas disponibles, tanto en su diseño como en su tecnología.</p>
-							   <a href="#" class="btn btn-color">Ver más...</a>
-						  </div>
-					 </div>
-				</article>
-		   </div>
-			   
-			  </body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="/img/FORTOCK NEGRO.png" style="width: 25%; padding: 10px;">
+            </div>
 
 
 
-		</div><!--Final del content-->
-		<!--pie de pagina-->
-		<div data-role="footer"data-position="fixed">
-			Valores de consumo de combustible y emisiones de todos los coches presentes en esta página*; 
-			Consumo de combustible en ciclo combinado: 19,5-12,7 l/100km (WLTP); Emisiones de CO₂ en ciclo combinado: 448-325 g/km (WLTP)
-
-		</div>
-	</div><!--Final de la pagina-->
-
-	<!--Inicio-->
-	<div data-role="page" id="histo">
-		<div data-role="header">
-			<div class="data-theme ui-body-a">
-			<div data-role="navbar" data-iconpos="bottom">
-				<ul>
-					<li><a href="index.html" data-icon="home">Inicio</a></li>
-					<li><a href="#mode" data-icon="tag">Modelos</a></li>
-					<li><a href="#histo" data-icon="info">Museo</a></li>
-					<li><a href="#noti" data-icon="star">Noticias</a></li>
-					</ul>
-				</div><!-- /navbar -->
-			</div>
-		</div><!--Final de header-->
-		<div data-role="content" class="ui-content"><!--inicio del content-->
-
-			<div id="demo1" class="carousel slide" data-bs-ride="carousel">
-
-				<!-- Indicators/dots -->
-				<div class="carousel-indicators">
-				  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-				  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-				  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-				</div>
-				
-				<!-- The slideshow/carousel -->
-				<div class="carousel-inner">
-				  <div class="carousel-item active">
-					<img src="imge/muse.jpg"  class="d-block" style="width:100%">
-					<div class="carousel-caption">
-					  <h3>LAMBORGHINI MUSEO</h3>
-					  <p>MUDETEC</p>
-					</div>
-				  </div>
-				  <div class="carousel-item">
-					<img src="imge/muse1.jpg"  class="d-block" style="width:100%">
-					<div class="carousel-caption">
-						<h3>LAMBORGHINI MUSEO</h3>
-						<p>MUDETEC</p>
-					</div> 
-				  </div>
-				  <div class="carousel-item">
-					<img src="imge/muse2.jpg"  class="d-block" style="width:100%">
-					<div class="carousel-caption">
-						<h3>LAMBORGHINI MUSEO</h3>
-						<p>MUDETEC</p>
-					</div>  
-				  </div>
-				</div>
-			  </div>
-			  <br>
-			  <div class="row">
-				<div class="col-sm-6"><H2>MUDETEC: AL DESCUBRIMIENTO DEL FUTURO</H2>
-					<P>El Museo Lamborghini se renueva convirtiéndose en Museo de las Tecnologías, donde la fascinante historia de la Casa del Toro, los icónicos modelos y las visitas a las líneas de producción hablan de más de cincuenta años de innovación que proyectan a Lamborghini hacia el futuro.</P> 
-				</div>
-				<div class="col-sm-6"><img src="imge/moto.jpg" alt="motor de auto" style="width: 100%;"></div>
-			  </div>
-			  <div class="row">
-				<div class="col-sm-6"><img src="imge/clas.jpg" style="width: 100%;"></div>
-				<div class="col-sm-6"><img src="imge/clas1.jpg" style="width: 100%;"></div>
-			  </div>
-			  <br>
-			  <div class="row">
-				<div class="col-sm-6"><img src="imge/mude.jpg" style="width: 100%;"></div>
-				<div class="col-sm-6"><p>Mudetec ofrece una experiencia interactiva gracias, entre otras cosas, al nuevo simulador de conducción, que amplifica las emociones y el descubrimiento de los coches en exposición.</p></div>
-			  </div>
-			  <br>
-			  <p>Para visitar el Mudetec con total seguridad, recuerda que es obligatorio reservar con antelación. Para acceder al Museo y a los departamentos de fabricación es necesario usar mascarilla. Más información y reservas.</p>
-			  <p>FECHAS DE CIERRE 2022</p>
-			  <ul>
-				<li>1 de enero; 1 de mayo; 15 de agosto; 25 de diciembre</li>
-				<li>10 de marzo (cerrado hasta las 13:30)</li>
-				<li>16, 23 y 30 de septiembre</li>
-				<li>24 y 31 de diciembre (cierre anticipado a las 14:00 h)</li>
-			  </ul>
-
-		</div><!--Final del content-->
-		<!--pie de pagina-->
-		<div data-role="footer"data-position="fixed">
-			Copyright © 2022 Automobili Lamborghini S.p.A. una sociedad unipersonal de Audi Group.
-			Todos los derechos reservados. Núm. IVA IT 00591801204
-		</div>
-	</div><!--Final de la pagina-->
-
-	<!--Inicio-->
-	<div data-role="page" id="noti">
-		<div data-role="header">
-			<div class="data-theme ui-body-a">
-			<div data-role="navbar" data-iconpos="bottom">
-				<ul>
-					<li><a href="index.html" data-icon="home">Inicio</a></li>
-					<li><a href="#mode" data-icon="tag">Modelos</a></li>
-					<li><a href="#histo" data-icon="info">Museo</a></li>
-					<li><a href="#noti" data-icon="star">Noticias</a></li>
-					</ul>
-				</div><!-- /navbar -->
-			</div>
-		</div><!--Final de header-->
-		<div data-role="content" class="ui-content"><!--inicio del content-->
-			<h3>Noticias</h3>
-			<h2>LAMBORGHINI WORLD</h2>
-			<img src="imge/noti1.jpg" style="width: 100%;">
-			<br>
-			<br>
-			<h4>1 Julio 2022</h4>
-			<p style="color: rgb(126, 123, 123);">HURACAN</p>
-			<h3 style="text-align: center;"><a href="#">HURACAN DATOS TECNICOS</a></h3>
-			<br>
-			<br>
-
-			<img src="imge/noti2.jpg" style="width: 100%;">
-			<br>
-			<br>
-			<h4>30 Junio 2022</h4>
-			<p style="color: rgb(126, 123, 123);">AVENTADOR, HURACAN</p>
-			<h3 style="text-align: center;"><a href="#">LAMBORGHINI COUNTACH LPI 800-4 EN JAPÓN</a></h3>
-			<br>
-			<br>
 
 
-			<img src="imge/noti3.webp" style="width: 100%;">
-			<br>
-			<br>
-			<h4>29 Junio 2022</h4>
-			<p style="color: rgb(126, 123, 123);">GESTIONAR</p>
-			<h3 style="text-align: center;"><a href="#">LAMBORGHINI ADVENTURE EXPERIENCE EN ISLANDIA</a></h3>
-			<br>
-			<br>
-			<a href="#" class="ui-btn ui-shadow">Ver mas</a>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#Inicio">Inicio</a></li>
+                    <li><a href="#Nosotros">Nosotros</a></li>
+                    <li><a href="#Product">Productos que fabricamos</a></li>
+                    <li><a href="#Contactanos">Contactanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-		</div><!--Final del content-->
-		<!--pie de pagina-->
-		<div data-role="footer"data-position="fixed">
-			Copyright © 2022 Automobili Lamborghini S.p.A. una sociedad unipersonal de Audi Group.
-			Todos los derechos reservados. Núm. IVA IT 00591801204
-		</div>
-	</div><!--Final de la pagina-->
+    <!--sI QUIERO UNA IMAGEN O GIF DEBAJO DE EL MENU-->
+    <!--<div class="jumbotron text-center">
+        <div class="gif"></div>
+      </div>
+      
+      
+      <!-- Container (About Section) -->
+
+    <div id="Inicio" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 style="color: #000000;">Sobre la empresa</h2><br>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</h4><br>
+                <p style="color: #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal logo"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="Nosotros" class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo slideanim"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2 style="color: #3cc4f1;">Nuestros valores</h2><br>
+                <h4 style="color: #e2e2e2;"><strong style="color: #71dfd0;">MISION:</strong> Our mission lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat.</h4><br>
+                <p style="color: #e2e2e2;"><strong style="color: #71dfd0;">VISION:</strong> Our vision Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Container (Portfolio Section) -->
+    <div class="container-fluid text-center">
+
+
+        <h2>Lo que dicen nuestos clientes</h2>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <h4>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua."<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua."<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                </div>
+                <div class="item">
+                    <h4>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua."<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="Product" class="container-fluid bg-grey">
+        <div class="text-center">
+            <h2 style="color: #3cc4f1;">Productos</h2>
+            <h4 style="color: #ffffff;">Choose a payment plan that works for you</h4>
+        </div>
+        <div class="row slideanim">
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="/img/bolsa.png" width="50%">
+                    </div>
+                    <div class="panel-footer">
+                        <p><strong>20</strong> Loreadsasdsdsadm</p>
+                        <p><strong>15</strong> Ipsum</p>
+                        <p><strong>5</strong> Dolor</p>
+                        <p><strong>2</strong> Sit</p>
+                        <p><strong>Endless</strong> Amet</p>
+                        <h3>$19</h3>
+                        <h4>per month</h4>
+                        <a href="#Contactanos"><button id="cont" class="btn btn-lg">Saber más</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="/img/bolsa.png" width="50%">
+                    </div>
+                    <div class="panel-footer">
+                        <p><strong>20</strong> Loreadsasdsdsadm</p>
+                        <p><strong>15</strong> Ipsum</p>
+                        <p><strong>5</strong> Dolor</p>
+                        <p><strong>2</strong> Sit</p>
+                        <p><strong>Endless</strong> Amet</p>
+                        <h3>$19</h3>
+                        <h4>per month</h4>
+                        <a href="#Contactanos"><button id="cont" class="btn btn-lg">Saber más</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="/img/bolsa.png" width="50%">
+                    </div>
+                    <div class="panel-footer">
+                        <p><strong>20</strong> Loreadsasdsdsadm</p>
+                        <p><strong>15</strong> Ipsum</p>
+                        <p><strong>5</strong> Dolor</p>
+                        <p><strong>2</strong> Sit</p>
+                        <p><strong>Endless</strong> Amet</p>
+                        <h3>$19</h3>
+                        <h4>per month</h4>
+                        <a href="#Contactanos"><button id="cont" class="btn btn-lg">Saber más</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Pricing Section) -->
+    <!--<div id="Product" class="container-fluid bg-grey">
+        <div class="text-center">
+          <h2 style="color: #3cc4f1;">Productos</h2>
+          <h4 style="color: #ffffff;">Creados para ti</h4>
+        </div>
+        <div class="row slideanim">
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h1>Bolsa</h1>
+              </div>
+              <div class="panel-body">
+                <img src="/img/bolsa.png" width="100%">
+              </div>
+              <div class="panel-footer">
+                <button class="btn btn-lg">Mas informacion</button>
+              </div>
+            </div>      
+          </div>     
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h1>Bolsa</h1>
+              </div>
+              <div class="panel-body">
+                <img src="/img/bolsa.png" width="100%">
+              </div>
+              <div class="panel-footer">
+                <button class="btn btn-lg">Mas informacion</button>
+              </div>
+            </div>      
+          </div>      
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h1>Bolsa</h1>
+              </div>
+              <div class="panel-body">
+                <img src="/img/bolsa.png" width="100%">
+              </div>
+              <div class="panel-footer">
+                <button class="btn btn-lg">Mas informacion</button>
+              </div>
+            </div>      
+          </div>  
+
+        </div>
+      </div>
+    -->
+
+    <!-- Container (Contact Section) -->
+    <div id="Contactanos" class="container-fluid">
+        <h2 class="text-center">Contacto</h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <p>Contactanos sad adawdaw ewdfewffesf.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Mexico</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> myemail@.com</p>
+            </div>
+            <div class="col-sm-7">
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d942.8336561497741!2d-96.42535175455812!3d19.049019699023923!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1694555855577!5m2!1ses-419!2smx"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="container-fluid text-center bg-grey">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p style="color: #fff;">Pagina de Facebook <a href="" title="Visit w3schools">asdsad</a></p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            // Add scrollspy to <body>
+            $('body').scrollspy({ target: ".cont, .navbar a, footer a", offset: 50 });
+
+            // Add smooth scrolling on all links inside the navbar
+            $("#myPage a").on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                }  // End if
+            });
+
+            $(window).scroll(function () {
+                $(".slideanim").each(function () {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+
+
+
+    </script>
+
 
 </body>
+
 </html>
