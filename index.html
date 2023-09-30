@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/text/text.css" rel="stylesheet" type="text/css">
+    <script src="js/ajax.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <style>
         body {
             font: 400 15px Lato, sans-serif;
@@ -43,11 +43,18 @@
 
         .container-fluid {
             padding: 85px 50px;
-            background-color: #ffffff
         }
 
         .bg-grey {
+
             background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+        }
+
+        #particles-js{
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+
         }
 
 
@@ -102,7 +109,7 @@
         }
 
         .panel:hover {
-            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, 0.2);
         }
 
         .panel-footer .btn:hover {
@@ -114,7 +121,7 @@
         .panel-heading {
             color: #2D8AAD !important;
             background-color: #ffffff !important;
-            padding: 25px;
+            padding: 55px;
             border-bottom: 1px solid transparent;
             border-top-left-radius: 0px;
             border-top-right-radius: 0px;
@@ -144,7 +151,8 @@
         .navbar {
             margin-bottom: 0;
             background-color: #000000;
-            padding-bottom: 28px;
+            padding-top: 0px;
+            padding-bottom: 0px;
             z-index: 9999;
             border: 0;
             font-size: 15px !important;
@@ -167,14 +175,7 @@
 
         .navbar-default .navbar-toggle {
             border-color: transparent;
-            color: #fff !important;
-        }
-
-        .Inicio {
-            height: 60vh !important;
-            background: url(/img/fondo.png);
-            background-size: cover;
-
+            color: #d41515 !important;
         }
 
         footer .glyphicon {
@@ -182,6 +183,7 @@
             margin-bottom: 50px;
             color: #3cc4f1;
         }
+        
 
         .slideanim {
             visibility: hidden;
@@ -219,7 +221,7 @@
             }
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 991px) {
             .col-sm-4 {
                 text-align: center;
                 margin: 25px 0;
@@ -240,17 +242,22 @@
 </head>
 
 <body id="Inicio" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <div id="particles-js"></div>
+    
+    
+    
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"
+                    style="padding: 25px;">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#myPage">
-                    <img src="img/FORTOCK NEGRO.png" style="width: auto; height: 65px; padding: 0px;"></a>
+                <a class="navbar-brand" href="#Inicio">
+                    <img src="img/FORTOCK NEGRO.png" style="width: auto; height: 50px; padding-top: 0px;"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 15px;">
@@ -265,19 +272,30 @@
 
 
     <!-- Container (About Section) -->
-    <div id="about" class="container-fluid image">
+    <div id="about" class="container-fluid" style="padding-left: 15%;">
         <div class="row">
-            <div class="col-sm-8">
-                <h3 style="color: #ffffff; padding: 50px 0px;">En <strong style="color: #3cc4f1;">Fortock Plastic
+            <div class="col-sm-6">
+                <h3 style="color: #000000; padding: 35px 0px; text-align: justify;">En <strong
+                        style="color: #3cc4f1;">Fortock Plastic
                         Bag</strong> nos
                     especializamos en la fabricación de bolsas plásticas para el embalaje y
-                    protección de todo tipo de manufactura.</h3><br>
-                <h4 style="color: #ffffff;">Nuestros empaques plásticos son utilizados por empresas de clase mundial
+                    protección de todo tipo de manufactura.</h3>
+                <h4 style="color: #000000;text-align: justify;">Nuestros empaques plásticos son utilizados por empresas
+                    de clase mundial
                     para protección de sus productos de tipo, electrónico, médico, electrodoméstico, entre otros tipos
                     de artículos que requieran
-                    protección, identificación y presencia única en el mercado.</h4><br>
+                    protección, identificación y presencia única en el mercado.</h4>
 
-                <h4 style="color: #ffffff;">Nuestros más de 10 años de experiencia en la fabricación de productos
+
+            </div>
+            <div class="col-sm-4">
+                <img src="img/ejmplo.png" alt="***" width="70%" height="auto" style="padding: 60px 10px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 style="color: #000000; text-align: justify;">Nuestros más de 10 años de experiencia en la
+                    fabricación de productos
                     plásticos nos respaldan para brindar soporte
                     en el desarrollo y creación de empaques con nuestros clientes. Actualmente nuestra oferta de precios
                     competitivos, calidad en productos, opciones
@@ -286,7 +304,7 @@
                     nuestros clientes.</h4>
             </div>
             <div class="col-sm-4">
-                <img src="img/ejmplo.png" alt="***" width="100%" style="padding: 80px 10px;">
+                <img src="img/fondo.png" alt="" width="80%" height="auto" style="padding: 0%;">
             </div>
         </div>
     </div>
@@ -297,7 +315,7 @@
                 <span class="glyphicon glyphicon-globe logo slideanim"></span>
             </div>
             <div class="col-sm-8">
-                <h2 style="color: #3cc4f1;">Nuestros valores</h2><br>
+                <h1 style="color: #3cc4f1;">Nuestros valores</h1><br>
                 <h3 style="color: #e2e2e2;"><strong style="color: #71dfd0;">MISION:</strong> Mejorar continuamente
                     nuestros procesos que garanticen la calidad en nuestros productos logrando la satisfacción de
                     nuestros clientes.</h3>
@@ -310,52 +328,64 @@
         </div>
     </div>
 
-    
+
 
 
     <!-- Container (Pricing Section) -->
     <div id="Product" class="container-fluid">
         <div class="text-center">
-            <h2 style="color: #3cc4f1;">Productos</h2>
+            <h1 style="color: #3cc4f1;">Productos</h1>
             <h4></h4>
         </div>
         <div class="row slideanim">
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa Anitestática</h1>
+                        <h2>Bolsa Anitestática</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa Anitestática.png" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                            <footer>
+                                <a href="#Contactanos" title="Ir a inicio">
+                                    <button class="btn btn-lg">Saber más</button></a>
+                                </a>
+                            </footer>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa Blindada</h1>
+                        <h2>Bolsa Blindada</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa Blindada.png" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa Burbuja Antiestática</h1>
+                        <h2>Bolsa Burbuja Antiestática</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa Burbuja Antiestática.png" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
@@ -364,39 +394,51 @@
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa Burbuja</h1>
+                        <h2>Bolsa Burbuja</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa Burbuja.png" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa en Rollo</h1>
+                        <h2>Bolsa en Rollo</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa en Rollo.png" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa Foam</h1>
+                        <h2>Bolsa Foam</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa Foam.png" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
@@ -405,39 +447,51 @@
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa HDPE</h1>
+                        <h2>Bolsa HDPE</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa HDPE.png" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa LDPE Antiestática</h1>
+                        <h2>Bolsa LDPE Antiestática</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa LDPE Antiestática.jpg" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa LDPE</h1>
+                        <h2>Bolsa LDPE</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa LDPE.png" width="62%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
@@ -447,39 +501,51 @@
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Bolsa Transparente Antiestática</h1>
+                        <h2>Bolsa Transparente Antiestática</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Bolsa Transparente Antiestática.png" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Especialidades Foam</h1>
+                        <h2>Especialidades Foam</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Especialidades Foam.jpg" width="96%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                        <a href="#Contactanos" title="Ir a inicio">
+                            <button class="btn btn-lg">Saber más</button></a>
+                        </a>
+                    </footer>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Lamina de Foam.jpg</h1>
+                        <h2>Lamina de Foam</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Lamina de Foam.jpg" width="96%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
@@ -490,44 +556,57 @@
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Rollo de Burbuja</h1>
+                        <h2>Rollo de Burbuja</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Rollo de Burbuja.jpg" width="70%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <h1>Rollo de Foam</h1>
+                        <h2>Rollo de Foam</h2>
                     </div>
                     <div class="panel-body">
                         <img src="img/productos/Rollo de Foam.png" width="51%">
                     </div>
                     <div class="panel-footer">
-                        <button class="btn btn-lg">Saber más</button>
+                        <footer>
+                            <a href="#Contactanos" title="Ir a inicio">
+                                <button class="btn btn-lg">Saber más</button></a>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>
         </div>
+
         <!--sadasd-->
     </div>
 
     <!-- Container (Contact Section) -->
     <div id="Contactanos" class="container-fluid bg-grey">
-        <h2 class="text-center" style="color: #3cc4f1;">Contacto</h2>
+        <h1 class="text-center" style="color: #3cc4f1;">Contacto</h1>
         <div class="row">
             <div class="col-sm-5">
-                <h3 style="color: hsl(0, 0%, 100%);"><strong style="color: #71dfd0;">Estamos aquí para ayudarte a empaquetar tus
+                <h3 style="color: hsl(0, 0%, 100%);"><strong style="color: #71dfd0;">Estamos aquí para ayudarte a
+                        empaquetar tus
                         éxitos.</strong><br><br> Contáctanos y descubre nuestras soluciones en bolsas plásticas
                     para el embalaje y protección de todo tipo de manufactura.</h3><br>
-                <p style="font-size: x-large; color: #ffffff;"><span class="glyphicon glyphicon-map-marker"></span>  Apodaca, Nuevo León</p>
-                <p style="font-size: x-large; color: #ffffff;"><span class="glyphicon glyphicon-phone"></span>  +52 8114207953</p>
-                <p style="font-size: x-large; color: #ffffff;"><span class="glyphicon glyphicon-envelope"></span>  cs.fortock@gmail.com</p>
+                <p style="font-size: x-large; color: #ffffff;"><span class="glyphicon glyphicon-map-marker"></span>
+                    Apodaca, Nuevo León</p>
+                <p style="font-size: x-large; color: #ffffff;"><span class="glyphicon glyphicon-phone"></span> +52
+                    8114207953</p>
+                <p style="font-size: x-large; color: #ffffff;"><span class="glyphicon glyphicon-envelope"></span>
+                    cs.fortock@gmail.com</p>
             </div>
             <div class="col-sm-7">
                 <div>
@@ -546,16 +625,16 @@
     </div>
 
     <footer class="container-fluid text-center" style="padding: 35px;">
-        <a href="#Inicio" title="To Top">
+        <a href="#Inicio" title="Ir a inicio">
             <span class="glyphicon glyphicon-chevron-up"></span>
+            
         </a>
-        <p style="color: #000000;">Pagina de Facebook <a href="" title="Visita nuestra pagina">asdsad</a></p>
     </footer>
 
     <script>
         $(document).ready(function () {
             // Add smooth scrolling to all links in navbar + footer link
-            $(".navbar a, footer a[href='#Inicio'], button a [href='#Contactanos']").on('click', function (event) {
+            $(".navbar a, footer a[href='#Inicio'], footer a[href='#Contactanos']").on('click', function (event) {
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
                     // Prevent default anchor click behavior
@@ -588,8 +667,11 @@
             });
         })
 
-        
+
     </script>
+    
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 
