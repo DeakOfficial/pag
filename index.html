@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="esp">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fortock Plastic Bag</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -14,10 +14,10 @@
         body {
             font: 400 15px Lato, sans-serif;
             line-height: 1.8;
+            color: #818181;
         }
 
         h2 {
-            /*Letra de titulo*/
             font-size: 24px;
             text-transform: uppercase;
             font-weight: 600;
@@ -39,24 +39,21 @@
             background-size: cover;
         }
 
+
+
         .container-fluid {
-            /*que tan despegado quieres que este la pagina*/
-            padding: 250px 50px;
+            padding: 85px 50px;
             background-color: #ffffff
         }
 
         .bg-grey {
-            /*Color secundario*/
-            background-color: #000000;
+            background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
         }
 
-        .logo-small {
-            color: #ddc6bf;
-            font-size: 50px;
-        }
+
 
         .logo {
-            color: #2D8AAD;
+            color: #4a8c91;
             font-size: 200px;
         }
 
@@ -99,25 +96,22 @@
         }
 
         .panel {
-            /*es el bordo del panel de productos*/
             border: 1px solid #ffffff;
-            border-radius: 0 !important;
+            border-radius: 0px !important;
             transition: box-shadow 0.5s;
         }
 
         .panel:hover {
-            box-shadow: 5px 0px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
         }
 
         .panel-footer .btn:hover {
-            /* controno del boton cuando pass el cursor arriba*/
             border: 1px solid #f7f7f7;
-            background-color: #2D8AAD !important;
-            color: #fdfdfd;
+            background-color: #000000 !important;
+            color: #2D8AAD;
         }
 
         .panel-heading {
-            /*es el apartado de arriba de los productos*/
             color: #2D8AAD !important;
             background-color: #ffffff !important;
             padding: 25px;
@@ -129,52 +123,44 @@
         }
 
         .panel-footer {
-            /*color de debajo de los articulos donde esta ubicado el boton de mas informacion*/
-            background-color: rgb(255, 255, 255) !important;
+            background-color: white !important;
         }
 
         .panel-footer h3 {
-            /*palabras escritas en el footer*/
-            color: #16e063;
             font-size: 32px;
         }
 
         .panel-footer h4 {
-            /*palabras escritas en el footer*/
-            color: #e7dbdb;
+            color: #aaa;
             font-size: 14px;
         }
 
         .panel-footer .btn {
-            /*palabras escritas en el footer*/
             margin: 15px 0;
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #2D8AAD;
+            color: #ffffff;
         }
 
-
         .navbar {
-            /*las letras del menu de navegacion*/
             margin-bottom: 0;
             background-color: #000000;
+            padding-bottom: 28px;
             z-index: 9999;
             border: 0;
-            font-size: 13px !important;
+            font-size: 15px !important;
             line-height: 1.42857143 !important;
             letter-spacing: 4px;
-            border-radius: 0;
+            border-radius: 0px;
             font-family: Montserrat, sans-serif;
         }
 
         .navbar li a,
         .navbar .navbar-brand {
-            /*Color de la lera de la barra de navegacion*/
             color: #2D8AAD !important;
         }
 
         .navbar-nav li a:hover,
         .navbar-nav li.active a {
-            /*Color al seleccionar la barra de navegacion*/
             color: #ffffff !important;
             background-color: #2D8AAD !important;
         }
@@ -192,7 +178,6 @@
         }
 
         footer .glyphicon {
-            /*Fleca del boton para regrear arriba*/
             font-size: 50px;
             margin-bottom: 50px;
             color: #3cc4f1;
@@ -253,9 +238,9 @@
         }
     </style>
 </head>
-<!-- barra de navegacion -->
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="Inicio" data-spy="scroll" data-target=".navbar" data-offset="60">
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -264,15 +249,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="img/FORTOCK NEGRO.png" style="width: 25%; padding: 10px;">
+                <a class="navbar-brand" href="#myPage">
+                    <img src="img/FORTOCK NEGRO.png" style="width: auto; height: 65px; padding: 0px;"></a>
             </div>
-
-
-
-
-
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right" style="padding-top: 15px;">
                     <li><a href="#Inicio">Inicio</a></li>
                     <li><a href="#Nosotros">Nosotros</a></li>
                     <li><a href="#Product">Productos que fabricamos</a></li>
@@ -282,24 +263,18 @@
         </div>
     </nav>
 
-    <!--sI QUIERO UNA IMAGEN O GIF DEBAJO DE EL MENU-->
-    <!--<div class="jumbotron text-center">
-        <div class="gif"></div>
-      </div>
-      
-      
-      <!-- Container (About Section) -->
 
-    <div id="Inicio" class="container-fluid image">
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid image">
         <div class="row">
             <div class="col-sm-8">
-                <h3 style="color: #ffffff;">En <strong style="color: #3cc4f1;">Fortock Plastic Bag</strong> nos
+                <h3 style="color: #ffffff; padding: 50px 0px;">En <strong style="color: #3cc4f1;">Fortock Plastic
+                        Bag</strong> nos
                     especializamos en la fabricación de bolsas plásticas para el embalaje y
                     protección de todo tipo de manufactura.</h3><br>
                 <h4 style="color: #ffffff;">Nuestros empaques plásticos son utilizados por empresas de clase mundial
-                    para
-                    protección de sus productos de tipo
-                    automotriz, electrónico, médico, electrodoméstico, entre otros tipos de artículos que requieran
+                    para protección de sus productos de tipo, electrónico, médico, electrodoméstico, entre otros tipos
+                    de artículos que requieran
                     protección, identificación y presencia única en el mercado.</h4><br>
 
                 <h4 style="color: #ffffff;">Nuestros más de 10 años de experiencia en la fabricación de productos
@@ -309,14 +284,13 @@
                     de crédito y multi variedad de artículos a ofrecer ha sido los principales pilares para el
                     fortalecimiento de las relaciones entre
                     nuestros clientes.</h4>
-
             </div>
             <div class="col-sm-4">
-                <img src="img/ejmplo.png" alt="***" width="100%">
+                <img src="img/ejmplo.png" alt="***" width="100%" style="padding: 80px 10px;">
             </div>
         </div>
     </div>
-    
+
     <div id="Nosotros" class="container-fluid bg-grey">
         <div class="row">
             <div class="col-sm-4">
@@ -324,191 +298,243 @@
             </div>
             <div class="col-sm-8">
                 <h2 style="color: #3cc4f1;">Nuestros valores</h2><br>
-                <h3 style="color: #e2e2e2;"><strong style="color: #71dfd0;">MISION:</strong> Mejorar continuamente nuestros procesos que garanticen la calidad en nuestros productos logrando la satisfacción de nuestros clientes.</h3></h3><br>
-                <h3 style="color: #e2e2e2;"><strong style="color: #71dfd0;">VISION:</strong> Ser empresa líder que provea seguridad, calidad y resguardo en los productos .</h3><br>
-                <h3 style="color: #e2e2e2;"><strong style="color: #71dfd0;">CALIDAD:</strong> Asegurar día con día los más altos estándares en nuestros productos.</h3>
+                <h3 style="color: #e2e2e2;"><strong style="color: #71dfd0;">MISION:</strong> Mejorar continuamente
+                    nuestros procesos que garanticen la calidad en nuestros productos logrando la satisfacción de
+                    nuestros clientes.</h3>
+                </h3><br>
+                <h3 style="color: #e2e2e2;"><strong style="color: #71dfd0;">VISION:</strong> Ser empresa líder que
+                    provea seguridad, calidad y resguardo en los productos .</h3><br>
+                <h3 style="color: #e2e2e2;"><strong style="color: #71dfd0;">CALIDAD:</strong> Asegurar día con día los
+                    más altos estándares en nuestros productos.</h3>
             </div>
         </div>
     </div>
 
+    
 
-
-    <!-- Container (Portfolio Section) -->
-    <div class="container-fluid text-center">
-
-
-        <h2>Lo que dicen nuestos clientes</h2>
-        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <h4>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua."<br><span>Michael Roe, Vice President, Comment Box</span></h4>
-                </div>
-                <div class="item">
-                    <h4>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua."<br><span>John Doe, Salesman, Rep Inc</span></h4>
-                </div>
-                <div class="item">
-                    <h4>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua."<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
-                </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-
-    <div id="Product" class="container-fluid bg-grey">
-        <div class="text-center">
-            <h2 style="color: #3cc4f1;">Productos</h2>
-            <h4 style="color: #ffffff;">Choose a payment plan that works for you</h4>
-        </div>
-        <div class="row slideanim">
-            <div class="col-sm-4 col-xs-12">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <h1>Bolsa</h1>
-                    </div>
-                    <div class="panel-body">
-                        <img src="/img/bolsa.png" width="50%">
-                    </div>
-                    <div class="panel-footer">
-                        <p><strong>20</strong> Loreadsasdsdsadm</p>
-                        <p><strong>15</strong> Ipsum</p>
-                        <p><strong>5</strong> Dolor</p>
-                        <p><strong>2</strong> Sit</p>
-                        <p><strong>sdfds</strong> Amet</p>
-                        <h3>$19</h3>
-                        <h4></h4>
-                        <a href="#Contactanos"><button id="cont" class="btn btn-lg">Saber más</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <h1>Bolsa</h1>
-                    </div>
-                    <div class="panel-body">
-                        <img src="/img/bolsa.png" width="50%">
-                    </div>
-                    <div class="panel-footer">
-                        <p><strong>20</strong> Loreadsasdsdsadm</p>
-                        <p><strong>15</strong> Ipsum</p>
-                        <p><strong>5</strong> Dolor</p>
-                        <p><strong>2</strong> Sit</p>
-                        <p><strong>sdfds</strong> Amet</p>
-                        <h3>$19</h3>
-                        <h4></h4>
-                        <a href="#Contactanos"><button id="cont" class="btn btn-lg">Saber más</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <h1>Bolsa</h1>
-                    </div>
-                    <div class="panel-body">
-                        <img src="/img/bolsa.png" width="50%">
-                    </div>
-                    <div class="panel-footer">
-                        <p><strong>20</strong> Loreadsasdsdsadm</p>
-                        <p><strong>15</strong> Ipsum</p>
-                        <p><strong>5</strong> Dolor</p>
-                        <p><strong>2</strong> Sit</p>
-                        <p><strong>sdfds</strong> Amet</p>
-                        <h3>$19</h3>
-                        <h4></h4>
-                        <a href="#Contactanos"><button id="cont" class="btn btn-lg">Saber más</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Container (Pricing Section) -->
-    <!--<div id="Product" class="container-fluid bg-grey">
+    <div id="Product" class="container-fluid">
         <div class="text-center">
-          <h2 style="color: #3cc4f1;">Productos</h2>
-          <h4 style="color: #ffffff;">Creados para ti</h4>
+            <h2 style="color: #3cc4f1;">Productos</h2>
+            <h4></h4>
         </div>
         <div class="row slideanim">
-          <div class="col-sm-4 col-xs-12">
-            <div class="panel panel-default text-center">
-              <div class="panel-heading">
-                <h1>Bolsa</h1>
-              </div>
-              <div class="panel-body">
-                <img src="/img/bolsa.png" width="100%">
-              </div>
-              <div class="panel-footer">
-                <button class="btn btn-lg">Mas informacion</button>
-              </div>
-            </div>      
-          </div>     
-          <div class="col-sm-4 col-xs-12">
-            <div class="panel panel-default text-center">
-              <div class="panel-heading">
-                <h1>Bolsa</h1>
-              </div>
-              <div class="panel-body">
-                <img src="/img/bolsa.png" width="100%">
-              </div>
-              <div class="panel-footer">
-                <button class="btn btn-lg">Mas informacion</button>
-              </div>
-            </div>      
-          </div>      
-          <div class="col-sm-4 col-xs-12">
-            <div class="panel panel-default text-center">
-              <div class="panel-heading">
-                <h1>Bolsa</h1>
-              </div>
-              <div class="panel-body">
-                <img src="/img/bolsa.png" width="100%">
-              </div>
-              <div class="panel-footer">
-                <button class="btn btn-lg">Mas informacion</button>
-              </div>
-            </div>      
-          </div>  
-
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa Anitestática</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa Anitestática.png" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa Blindada</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa Blindada.png" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa Burbuja Antiestática</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa Burbuja Antiestática.png" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    -->
+        <div class="row slideanim">
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa Burbuja</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa Burbuja.png" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa en Rollo</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa en Rollo.png" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa Foam</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa Foam.png" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row slideanim">
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa HDPE</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa HDPE.png" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa LDPE Antiestática</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa LDPE Antiestática.jpg" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa LDPE</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa LDPE.png" width="62%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--sadasd-->
+        <div class="row slideanim">
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Bolsa Transparente Antiestática</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Bolsa Transparente Antiestática.png" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Especialidades Foam</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Especialidades Foam.jpg" width="96%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Lamina de Foam.jpg</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Lamina de Foam.jpg" width="96%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--sadasd-->
+        <!--sadasd-->
+        <div class="row slideanim">
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Rollo de Burbuja</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Rollo de Burbuja.jpg" width="70%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h1>Rollo de Foam</h1>
+                    </div>
+                    <div class="panel-body">
+                        <img src="img/productos/Rollo de Foam.png" width="51%">
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-lg">Saber más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--sadasd-->
+    </div>
 
     <!-- Container (Contact Section) -->
-    <div id="Contactanos" class="container-fluid">
-        <h2 class="text-center">Contacto</h2>
+    <div id="Contactanos" class="container-fluid bg-grey">
+        <h2 class="text-center" style="color: #3cc4f1;">Contacto</h2>
         <div class="row">
             <div class="col-sm-5">
-                <h3 style="color: #000000;"><strong style="color: #3cc4f1;">Estamos aquí para ayudarte a empaquetar tus éxitos.</strong><br><br> Contáctanos y descubre nuestras soluciones en bolsas plásticas 
+                <h3 style="color: hsl(0, 0%, 100%);"><strong style="color: #71dfd0;">Estamos aquí para ayudarte a empaquetar tus
+                        éxitos.</strong><br><br> Contáctanos y descubre nuestras soluciones en bolsas plásticas
                     para el embalaje y protección de todo tipo de manufactura.</h3><br>
-                <p><span class="glyphicon glyphicon-map-marker"></span> Apodaca, Nuevo León</p>
-                <p><span class="glyphicon glyphicon-phone"></span> +52 8114207953</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> cs.fortock@gmail.com</p>
+                <p style="font-size: x-large; color: #ffffff;"><span class="glyphicon glyphicon-map-marker"></span>  Apodaca, Nuevo León</p>
+                <p style="font-size: x-large; color: #ffffff;"><span class="glyphicon glyphicon-phone"></span>  +52 8114207953</p>
+                <p style="font-size: x-large; color: #ffffff;"><span class="glyphicon glyphicon-envelope"></span>  cs.fortock@gmail.com</p>
             </div>
             <div class="col-sm-7">
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68353.41499759753!2d-100.21823039445741!3d25.790907551910276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662ef2f3
-                        1987e45%3A0x7f336803913db8d4!2sCd%20Apodaca%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1695685574307!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68353.41499759753!2d-100.21823039445741!3d25.790907551910276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662ef2f3
+                        1987e45%3A0x7f336803913db8d4!2sCd%20Apodaca%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1695685574307!5m2!1ses-419!2smx"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
@@ -519,22 +545,17 @@
         </div>
     </div>
 
-
-
-    <footer class="container-fluid text-center bg-grey">
-        <a href="#myPage" title="To Top">
+    <footer class="container-fluid text-center" style="padding: 35px;">
+        <a href="#Inicio" title="To Top">
             <span class="glyphicon glyphicon-chevron-up"></span>
         </a>
-        <p style="color: #fff;">Pagina de Facebook <a href="" title="Visit w3schools">asdsad</a></p>
+        <p style="color: #000000;">Pagina de Facebook <a href="" title="Visita nuestra pagina">asdsad</a></p>
     </footer>
 
     <script>
         $(document).ready(function () {
-            // Add scrollspy to <body>
-            $('body').scrollspy({ target: ".cont", offset: 50 });
-
-            // Add smooth scrolling on all links inside the navbar
-            $("#myPage a").on('click', function (event) {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#Inicio'], button a [href='#Contactanos']").on('click', function (event) {
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
                     // Prevent default anchor click behavior
@@ -544,15 +565,15 @@
                     var hash = this.hash;
 
                     // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 800, function () {
+                    }, 900, function () {
 
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
                     });
-                }  // End if
+                } // End if
             });
 
             $(window).scroll(function () {
@@ -567,10 +588,8 @@
             });
         })
 
-
-
+        
     </script>
-
 
 </body>
 
